@@ -1,14 +1,19 @@
+import Header from "../components/Header";
+import Navbar from "../components/Navbar";
+import Results from "../components/Results";
 import Head from "next/head";
-import Image from "next/image";
-import { Inter } from "@next/font/google";
-import styles from "@/styles/Home.module.css";
-
-const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
   return (
-    <>
-      <h1 className="text-red-500 text-2xl font-bold">Hello World!!</h1>
-    </>
+    <div>
+      <Head>
+        <title>Movie Database</title>
+        <meta name="description" content="IMDB Clone Website" />
+        <link rel="icon" href="/favicon.ico" />
+      </Head>
+      <Header />
+      <Navbar />
+      <Results />
+    </div>
   );
 }
